@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="htiedot.js"></script>
+    <title>Henkilotiedot</title>       
+        
+</head>
+
+
+<body>
+    <section class="Section">
+        <div class="form">
+         <form id="this form">
+        <label for="Enimi">Etunimi: <input class="input" type="text" id="enimi"></label>
+        <br><br>
+        <label for="Snimi">Sukunimi: <input class="input" type="text" id="snimi"></label>
+        <br><br>
+        <label for="Spvm">Syntymäpäivä: <input class="input" type="date" id="spvm"></label>
+        <br><br><br>
+        <label for="saihe">Suosikki aihe?</label>
+        <br>
+        <label for="html"><input class="radio" type="radio" id="html">HTML</label>
+        <br>
+        <label for="css"><input class="radio" type="radio" id="css">CSS</label>
+        <br>
+        <label for="python"><input class="radio" type="radio" id="python">Python</label>
+        <br><br><br>
+        <label for="kouluun">Miten tulet kouluun</label>
+        <br>
+        <label for="Bussi"><input type="checkbox" id="bussilla">Bussilla</label>
+        <br>
+        <label for="Juna"><input type="checkbox" id="junalla">Junalla</label>
+        <br>
+        <label for="Pyora"><input type="checkbox" id="pyoralla">Pyörällä</label>
+        <br>
+        <label for="Auto"><input type="checkbox" id="autolla">Autolla</label>
+        <br><br>
+        
+          
+         <div class="button">
+            <button onclick="taydenna()">Laske ikä</button>
+            <p id="tulos"></p>
+         </div>
+         </form>
+ </div>
+</section>
+</body>
+<script>
+        function Taydenna(){
+            const tämäPäivä = new Date();
+            var tämäVuosi = tämäPäivä.getFullYear();
+            var spvm = document.getElementById("spvm").value;
+            syntymäPäivä = new Date(spvm);
+            var syntymäVuosi = syntymäPäivä.getFullYear();
+            var ikä = tämäVuosi - syntymäVuosi;
+        
+            const enimi = document.getElementById("enimi").value;
+            const snimi = document.getElementById("snimi").value;
+            var nimi = enimi + " " + snimi;
+        
+            var tulos = "Hei " + nimi + "! Olet " + ikä + " vuotias!"
+        
+            document.getElementById("tulos").innerHTML = tulos;
+        }
+
+
+</script>
+
+
+
+
+
+</html>

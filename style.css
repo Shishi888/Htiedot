@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(103, 102, 102);
+    background-repeat: no-repeat;
+}
+
+
+form{
+    background-color:rgb(190, 145, 213);
+    width: 30%;
+    height: 70%;
+    padding: 100px;
+    margin: 100px;
+    font-size: x-large;
+    border: 5px;
+    
+    
+}
+
+.input{
+    float: right;
+    padding: 8px;
+     
+}
+.button{
+  
+   width: 50px;
+   
+}
+p{
+    
+
+    color: darkmagenta;
+    font-family: cursive;
+    font-weight: bold;
+    border-style: solid;
+    text-align: center;
+    border-width: 30px;
+    width: 300px;
+    padding: 25px;
+    
+
+}
+
+
+
+
+
